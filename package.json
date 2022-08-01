@@ -1,0 +1,21 @@
+{
+  "name": "m2",
+  "version": "0.0.1",
+  "description": "This example is so cool.",
+  "scripts": {
+    "start": "node app_71.js"
+  },
+  "keywords": [
+    "example",
+    "heroku"
+  ],
+  "author": "inteli",
+  "license": "Inteli",
+  "dependencies": {
+    "express": "^4.18.0",
+    "sqlite3": "^5.0.5"
+  },
+  "engines": {
+    "node": "16.14.0"
+  }
+}

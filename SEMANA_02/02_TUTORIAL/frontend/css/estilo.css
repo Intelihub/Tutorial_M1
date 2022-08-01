@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* seletores padrões */
+body { 		
+    background-color:antiquewhite;
+}
+.col-6 , .col-8 {
+    min-height: 50px;
+    background-color:darkgrey;
+    border: solid 1px #000;
+}	
+.col-md-8 {
+    background-color:darksalmon;
+}
+/*imagens flexiveis*/
+img {   
+  	max-width: 100%;   
+  	height: auto;  
+} 
+	
+	
+/*seletores para desktops*/
+@media screen and (max-width: 1128px) {
+	body { 		
+        background-color:aquamarine;
+    }
+}
+
+/*seletores para tablets*/
+@media screen and (max-width: 768px) {
+	body { 		
+        background-color:brown;
+    }
+}
+
+/*seletores para celurares*/
+@media screen and (max-width: 520px) {
+	body { 		
+        background-color:darkkhaki;
+    }
+}

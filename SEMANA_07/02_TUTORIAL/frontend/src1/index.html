@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>ETAPA 7</title>
+	<link rel="stylesheet" href="style.css" />	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="script.js"></script>
+
+</head>
+<body>
+	<div id="main">
+		<h1>ETAPA 7</h1>
+		Integração front-end e back-end e AJAX
+		
+		<div id="calc" class="sections">
+			<h3>PARTE 1 - Cálculos</h3>
+			Cálculos realizados e respectivos resultados obtidos:
+		</div>
+		<button onclick="CalcAddAndShow(10, 50)" class="button-calc">Calcular 10 + 50</button>
+		
+		<div id="get" class="sections">
+			<h3>PARTE 2 - Teste GET</h3>
+			Resultados obtidos com a requisição GET:
+		</div>
+		<button onclick="TestGET()" class="button-get">Test GET</button>
+		
+		<div id="getDB" class="sections">
+			<h3>Resultado GET FROM DB</h3>
+			Resultados obtidos com a requisição GET no nosso banco:
+		</div>
+		<button onclick="TestGETDB()" class="button-get-db">GET FROM DB</button>
+	</div>
+</body>
+</html>
