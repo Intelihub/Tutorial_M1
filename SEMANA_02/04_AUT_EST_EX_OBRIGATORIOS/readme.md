@@ -1,1 +1,0 @@
-Sem exercícios de programação obrigatórios para essa semana :)

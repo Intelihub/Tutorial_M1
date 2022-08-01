@@ -1,0 +1,1 @@
+Sem exercícios referentes a etapa anterior do tutorial para essa semana :)
