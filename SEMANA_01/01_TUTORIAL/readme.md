@@ -37,7 +37,7 @@ Essa etapa tem por objetivo instalar e testar as ferramentas necessárias para o
 
    > \* Criar conta pessoal (com e-mail Inteli) ou entrar na sua conta se já a tiver
 
-   > 2. Fork do repositório Template: [https://github.com/Intelihub/Template_Aluno](https://github.com/Intelihub/Template_Aluno), dando o nome `modulo1`.
+   > 2. Fork do repositório Template: [https://github.com/Intelihub/Tutorial_M1](https://github.com/Intelihub/Tutorial_M1), dando o nome `modulo1`.
    
    > \* Indicamos usar a versão web do Github para fazer a cópia desse diretório do Template que cada aluno deve ter no seu repositório individual (1.acesse o repositório do link supracitado; 2. clique no botão `Fork` ou `Garfo`, se seu Github estiver em português, localizado no canto superior direito da página, logo abaixo da barra de menu do Github; e 3. dê o nome de `modulo1` para o novo repositório).
 
