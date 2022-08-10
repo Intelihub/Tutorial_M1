@@ -35,12 +35,19 @@ Tutorial em formato de vídeo: [https://youtu.be/Wa0PhB2ar5k](https://youtu.be/W
 
    `No Inspector, clique no campo Text para adicionar um texto no botão`
    
-4. Adicione
-5. Crie uma conta no brModeloWeb:  [https://www.brmodeloweb.com/lang/pt-br/index.html](https://www.brmodeloweb.com/lang/pt-br/index.html)
-6. Abra o "Prompt de Comando" (Windows) no modo administrador ou "Terminal" (Mac) e digite:
+4. Da mesma forma que o botão, adicione e organize na cena:
+
+-3 lineEdits
+-3 labels
+
+Estes serão os campos de entrada de dados.
+
+5. Adicione também:
+
+-1 Label
+-1 ColorRect
+
+Este será o campo de resposta do seu código
 
 
-### Conclusão
-Se os resultados observados no navegador para os itens `2`, `3` e `4` das instruções foram os mesmos dos descritos nos itens, seus testes de instalação estão todos ok :)
-
-**Caso algum ponto não tenha conseguido conforme esperado, aguarde a instrução da semana na qual todas as dúvidas serão solucionadas!**
+6. ---
