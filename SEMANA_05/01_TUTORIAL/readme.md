@@ -1,4 +1,4 @@
-# Etapa 1 - Setup do ambiente
+# Etapa 5 - Variáveis Globais
 
 Essa etapa tem por objetivo configurar um script global, onde é possível criar variáveis para transição de dados entre cenas.
 
