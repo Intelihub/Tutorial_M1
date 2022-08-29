@@ -1,7 +1,7 @@
 #Exercício da semana 5
 
 O código abaixo possui vários erros, utilize o mesmo dentro da sua tela interativa, a primeira tela criada no Godot.Corrija os erros e comente as partes que estão erradas.
-
+```
 extends Node2D
 
 var teste = false
@@ -35,3 +35,4 @@ func _on_Button3_pressed():
 		if(cont!=0):
 			nome = nome+"baldo"
 		$Label2.text = nome
+```
