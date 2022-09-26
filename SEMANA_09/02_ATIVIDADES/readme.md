@@ -4,7 +4,7 @@ Dado os seguintes algoritmos (https://github.com/Intelihub/Tutorial_M1/tree/main
 
 Também, crie um algoritmo que recebe 10 números do usuário e ordene de formar crescente.
 
-Coloque na resposta do Adalove a complexidade dos algoritmos e o link para seu algoritmo.
+Coloque na resposta do Adalove a complexidade (Use a notação Big-O) dos algoritmos e o link para seu algoritmo.
 ++++++++++++++++++++++++++++++++++++++
 
 São duas atividades:<br>
