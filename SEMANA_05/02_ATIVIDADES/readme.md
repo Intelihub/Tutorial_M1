@@ -1,6 +1,6 @@
 #Exercício da semana 5
 
-O código abaixo possui vários erros, utilize o mesmo dentro da sua tela interativa, a primeira tela criada no Godot.Corrija os erros e comente as partes que estão erradas.
+O código abaixo possui vários erros, utilize o mesmo dentro da sua tela interativa, a primeira tela criada no Godot. Corrija os erros e comente as partes que estão erradas.
 ```
 extends Node2D
 
@@ -8,7 +8,6 @@ var teste = false
 var valor = 0
 var número = 0
 lista = []
-onready var inventario = [[get_node("Inventario/Fruit1"),get_node("Inventario/Label1")],[get_node("Inventario/Fruit2"),get_node("Inventario/Label2")],[get_node("Inventario/Fruit3"),get_node("Inventario/Label3")]]
 
 func _on_Button_pressed():
 	#Coletando dados inseridos pelo usuário

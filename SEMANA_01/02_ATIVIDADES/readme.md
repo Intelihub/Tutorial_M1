@@ -5,9 +5,13 @@ Atividade da semana:
 Verifique o script do jogo e descubra para que servem as variáveis:
 
 -status
+
 -vscore
+
 -x 
+
 -y 
+
 
 Depois de descobrir, comente o código descrevendo suas funcionalidades.
 

@@ -9,6 +9,8 @@ Essa etapa tem por objetivo instalar e testar as ferramentas necessárias para o
 1. Criar uma conta no GitHub com seu e-mail Inteli: [https://github.com/](https://github.com/)
 2. Baixar e instalar o GitHub Desktop: [https://desktop.github.com/](https://desktop.github.com/)
 
+   > \* Para auxiliar na isntalação e compreensão do Godot [https://youtu.be/PBC0GhExazg](https://youtu.be/PBC0GhExazg)
+
 3. GitHub:
   
    > \* Baixar e instalar o GitHub Desktop se ainda não a tiver instalada
