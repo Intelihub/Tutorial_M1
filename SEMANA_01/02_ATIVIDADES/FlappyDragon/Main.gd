@@ -3,7 +3,7 @@ extends Node # instancia a classe Node2D
 var status = 1 # controla o mainLoop do jogo. 0 == gameover, 1 == jogando
 var vscore = 0 # score do jogo
 var x = 1.5 # posição horizontal do cenário (dragão fica parado, cenário se movimenta)
-var y = 1.5 # posição vertical do dragão
+var y = 3 # posição vertical do dragão
 
 # executa essa função ao carregar o jogo
 func _ready():
@@ -41,11 +41,11 @@ func _process(delta):
 			
 		# se apertou seta para baixo, aumenta o valor de y (posição vertical) do dragão
 		if Input.is_action_pressed("ui_down"):
-			$dragon.position.y += 2
+			$dragon.position.y += 4
 
 		# se apertou seta para cima, diminui o valor de y (posição vertical) do dragão
 		if Input.is_action_pressed("ui_up"):
-			$dragon.position.y -= 4
+			$dragon.position.y -= 8
 			
 	elif status == 0: # parado
 		
