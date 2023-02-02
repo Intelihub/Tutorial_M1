@@ -1,3 +1,4 @@
+ATIVIDADE NÃO OBRIGATÓRIA<br>
 Problema proposto no Adalove:<br>
 ++++++++++++++++++++++++++++++++++++++<br>
 Dado os seguintes algoritmos (https://github.com/Intelihub/Tutorial_M1/tree/main/SEMANA_09/02_ATIVIDADES), responda qual a complexidade deles?
