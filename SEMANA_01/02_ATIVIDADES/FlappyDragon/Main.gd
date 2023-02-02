@@ -1,9 +1,9 @@
 extends Node # instancia a classe Node2D
 
-var status = 1
-var vscore = 0
-var x = 1.5 
-var y = 1.5 
+var status = 1 # controla o mainLoop do jogo. 0 == gameover, 1 == jogando
+var vscore = 0 # score do jogo
+var x = 1.5 # posição horizontal do cenário (dragão fica parado, cenário se movimenta)
+var y = 1.5 # posição vertical do dragão
 
 # executa essa função ao carregar o jogo
 func _ready():
