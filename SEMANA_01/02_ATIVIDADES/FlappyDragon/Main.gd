@@ -1,9 +1,9 @@
 extends Node # instancia a classe Node2D
 
-var status = 1
-var vscore = 0
-var x = 1.5 
-var y = 1.5 
+var status = 1 # define se o jogo está rodando (status = 1) ou está parado (status = 0)
+var vscore = 0 # essa variável define o score do jogador cada vez que se utrapasssa os obstaculos
+var x = 1.5 # variável utilizada para relacionar o objetos na tela na horizontal
+var y = 1.5 # variável utilizada para relacionar o objetos na tela na vertical
 
 # executa essa função ao carregar o jogo
 func _ready():
@@ -22,7 +22,7 @@ func _process(delta):
 			$background.position.x = 600
 			
 		# movimenta as colunas para colisão
-		$columns.position.x -= 2*x
+		$columns.position.x -= 4*x # alterando isso faz com que "o drangão" ande mais rápido
 		if ($columns.position.x) < -550:
 			$columns.position.x = rand_range(0, 350) - 50
 			$columns.position.y = rand_range(0, 400) - 200
