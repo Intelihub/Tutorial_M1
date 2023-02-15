@@ -1,9 +1,9 @@
 extends Node # instancia a classe Node2D
 
-var status = 1
-var vscore = 0
-var x = 1.5 
-var y = 1.5 
+var status = 1 #é o status entre jogando (1 onde o dragão avança) e parado (0 onde o dragão fica parado). Ao usar outros valores o jogo fica parado já que o valor 1 é o aceito para entrar no status jogando
+var vscore = 3.14159265359 # é a pontuação inicial. a pontuação aparece zerada no começo, mas ao passar pelo primeiro pilar, é somado o vscore com o o acrésimo de pontuação.
+var x = 390 # é a velocidade do dragão. valores negativos fazem ele ir para a esquerda, valores a partir de 390 o dragão voa tão rápido que não é registrado o impacto ou pontuação. o dragão não se move na x = 0
+var y = 0 # é a "gravidade" velocidade constante, onde valores - fazer o dragão subir, valores + fazem ele descer, e 0 vaz ele manter a altura 
 
 # executa essa função ao carregar o jogo
 func _ready():
