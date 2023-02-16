@@ -3,11 +3,6 @@ extends Node2D
 const myName = ["Felipe", "Liberman", "Fuchs"]
 var userInput = []
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	# Shows my name as a (pre-filled) list
-	$labelName.text += str(myName)
-
 func _input(ev):
 	# Makes enter behave like button press
 	if Input.is_key_pressed(KEY_ENTER):
@@ -31,3 +26,7 @@ func processUserInput():
 # Handles btnSubmit pressed
 func _on_btnSubmit_pressed():
 	processUserInput()
+	
+# Handles btnPreFilled pressed
+func _on_btnPreFilled_pressed():
+	_showOnScreen(str(myName))
