@@ -14,10 +14,11 @@ rect_pivot_offset = Vector2( 69, 12 )
 text = "Nome do Aluno: "
 
 [node name="labelOutput" type="Label" parent="."]
-margin_left = 389.0
-margin_top = 233.0
-margin_right = 594.0
-margin_bottom = 280.0
+margin_left = 223.0
+margin_top = 225.0
+margin_right = 790.0
+margin_bottom = 312.0
+autowrap = true
 
 [node name="lineEditUserInput" type="LineEdit" parent="."]
 margin_left = 222.0
