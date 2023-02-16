@@ -23,10 +23,14 @@ func processUserInput():
 	_showOnScreen(str(userInput))
 	_cleanUpInput()
 	
-# Handles btnSubmit pressed
-func _on_btnSubmit_pressed():
+# Handles btnSubmitList pressed
+func _on_btnSubmitList_pressed():
 	processUserInput()
 	
 # Handles btnPreFilled pressed
 func _on_btnPreFilled_pressed():
 	_showOnScreen(str(myName))
+
+
+func _on_btnSubmitWord_pressed():
+	_showOnScreen($lineEditUserInput.text)

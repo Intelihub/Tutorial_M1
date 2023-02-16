@@ -13,26 +13,34 @@ margin_bottom = 195.0
 autowrap = true
 
 [node name="lineEditUserInput" type="LineEdit" parent="."]
-margin_left = 143.0
+margin_left = 72.0
 margin_top = 351.0
-margin_right = 564.0
+margin_right = 493.0
 margin_bottom = 418.0
-placeholder_text = "Digite um texto para adicionar à lista"
+placeholder_text = "Digite um texto e pressione algum dos botões de enviar"
 
-[node name="btnSubmit" type="Button" parent="."]
-margin_left = 581.0
+[node name="btnSubmitList" type="Button" parent="."]
+margin_left = 510.0
 margin_top = 352.0
-margin_right = 708.0
+margin_right = 637.0
 margin_bottom = 420.0
 rect_pivot_offset = Vector2( 116, 36 )
-text = "Enviar"
+text = "Enviar à Lista"
 
 [node name="btnPreFilled" type="Button" parent="."]
-margin_left = 728.0
+margin_left = 842.0
 margin_top = 352.0
-margin_right = 886.0
+margin_right = 1000.0
 margin_bottom = 421.0
 text = "Mostrar Lista Existente"
 
-[connection signal="pressed" from="btnSubmit" to="." method="_on_btnSubmit_pressed"]
+[node name="btnSubmitWord" type="Button" parent="."]
+margin_left = 651.0
+margin_top = 352.0
+margin_right = 764.0
+margin_bottom = 421.0
+text = "Enviar palavra/valor"
+
+[connection signal="pressed" from="btnSubmitList" to="." method="_on_btnSubmitList_pressed"]
 [connection signal="pressed" from="btnPreFilled" to="." method="_on_btnPreFilled_pressed"]
+[connection signal="pressed" from="btnSubmitWord" to="." method="_on_btnSubmitWord_pressed"]
