@@ -1,0 +1,76 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Node2D.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 488.0
+margin_top = 56.0
+margin_right = 598.0
+margin_bottom = 70.0
+text = "Adicionar texto"
+
+[node name="LineEdit2" type="LineEdit" parent="."]
+margin_left = 456.0
+margin_top = 88.0
+margin_right = 624.0
+margin_bottom = 144.0
+rect_pivot_offset = Vector2( 72, 16 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 240.0
+margin_top = 168.0
+margin_right = 328.0
+margin_bottom = 200.0
+rect_pivot_offset = Vector2( 56, 12 )
+text = "registrar"
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 376.0
+margin_top = 168.0
+margin_right = 472.0
+margin_bottom = 200.0
+rect_pivot_offset = Vector2( 56, 12 )
+text = "incrementar"
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 504.0
+margin_top = 168.0
+margin_right = 632.0
+margin_bottom = 200.0
+rect_pivot_offset = Vector2( 56, 12 )
+text = "Adicionar \"Baldo\""
+
+[node name="LineEdit" type="LineEdit" parent="."]
+margin_left = 240.0
+margin_top = 88.0
+margin_right = 408.0
+margin_bottom = 144.0
+rect_pivot_offset = Vector2( 72, 16 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 272.0
+margin_top = 224.0
+margin_right = 318.0
+margin_bottom = 238.0
+rect_scale = Vector2( 2, 2 )
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 472.0
+margin_top = 224.0
+margin_right = 512.0
+margin_bottom = 238.0
+rect_scale = Vector2( 2, 2 )
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 264.0
+margin_top = 56.0
+margin_right = 374.0
+margin_bottom = 70.0
+text = "Adicione número"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
