@@ -1,6 +1,8 @@
 extends Node2D
 
-#foram excluidas variaveis: letra maiusculas e numeros
+#foram excluidas variaveis que nao tinham funcao
+#adicionar 'var' antes das variaveis e retirada de acento
+#criacao da variavel para armazenar nome
 var numero = 0
 var lista = []
 var nome
@@ -15,7 +17,8 @@ func _on_Button_pressed():
 
 
 func _on_Button2_pressed():
-	#Incrementando 45 ao número inserido pelo usuário
+	#modificacao para minuscula na variavel numero
+	#Somando ao número inserido pelo usuário
 	for i in range(10):
 		numero+=i
 		lista.append(numero)
