@@ -1,3 +1,5 @@
+# EM DESUSO - não utilize para referências do módulo 1
+
 # Sobre esse repositório
 Neste repositório serão concentradas todas as informações necessárias relacionadas ao tutorial do módulo 1.
 
