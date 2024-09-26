@@ -1,0 +1,198 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://pack-rpg/pack-rpg/chars/gabe/gabe-idle-run.png" type="Texture" id=1]
+[ext_resource path="res://cena2.gd" type="Script" id=2]
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=3]
+[ext_resource path="res://pack-rpg/pack-rpg/tiles/generic-rpg-tile02.png" type="Texture" id=4]
+[ext_resource path="res://forest_tileset_lite/Sprites/Background/sky_cloud.png" type="Texture" id=5]
+[ext_resource path="res://pack-rpg/pack-rpg/chars/vendor/generic-rpg-vendor.png" type="Texture" id=6]
+[ext_resource path="res://pack-rpg/pack-rpg/soundtrack/Celestial.mp3" type="AudioStream" id=7]
+[ext_resource path="res://Pixel Keys x16/Tiles Black/pxkb_arrow_up.png" type="Texture" id=10]
+[ext_resource path="res://forest_tileset_lite/Sprites/Background/cloud.png" type="Texture" id=11]
+[ext_resource path="res://Pixel Keys x16/Tiles Black/pxkb_arrow_right.png" type="Texture" id=12]
+[ext_resource path="res://Pixel Keys x16/Tiles Black/pxkb_arrow_left.png" type="Texture" id=13]
+[ext_resource path="res://SecularOne-Regular.ttf" type="DynamicFontData" id=15]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8.02702, 9.47126 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "direita"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Gabe-idle-run:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8, 1.2, 1.6, 2, 2.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6 ]
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=15]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="TileSet" id=5]
+3/name = "generic-rpg-tile02.png 3"
+3/texture = ExtResource( 4 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 16, 16 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 15 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 15 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 28, 22 )
+
+[sub_resource type="DynamicFont" id=14]
+font_data = ExtResource( 15 )
+
+[sub_resource type="SegmentShape2D" id=13]
+b = Vector2( 2412, 0 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.1, 1 )
+motion_mirroring = Vector2( 1440, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 236, 440 )
+scale = Vector2( 1.40988, 3.08235 )
+texture = ExtResource( 5 )
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.2, 1 )
+motion_mirroring = Vector2( 1440, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2( 60, 312 )
+texture = ExtResource( 11 )
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.3, 1 )
+motion_mirroring = Vector2( 1440, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer6"]
+position = Vector2( 372, 492 )
+texture = ExtResource( 11 )
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.4, 1 )
+motion_mirroring = Vector2( 1440, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer7"]
+position = Vector2( 124, 588 )
+texture = ExtResource( 11 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( -68, 576 )
+scale = Vector2( 1.5, 1.5 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( -1.97298, 1.1954 )
+shape = SubResource( 1 )
+
+[node name="Gabe-idle-run" type="Sprite" parent="KinematicBody2D"]
+position = Vector2( -0.945946, 0 )
+scale = Vector2( 0.932432, 1 )
+texture = ExtResource( 1 )
+hframes = 7
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="KinematicBody2D/Gabe-idle-run"]
+root_node = NodePath("../..")
+anims/direita = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
+current = true
+zoom = Vector2( 0.3, 0.4 )
+smoothing_enabled = true
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 5 )
+cell_size = Vector2( 16, 16 )
+show_collision = true
+format = 1
+tile_data = PoolIntArray( 1835028, 1, 0, 1835029, 1, 0, 1835030, 1, 0, 1900554, 1, 0, 1900555, 1, 0, 1900562, 1, 0, 1900563, 1, 0, 1900577, 1, 0, 1900578, 1, 0, 1900579, 1, 0, 1966084, 1, 0, 1966085, 1, 0, 1966086, 1, 0, 1966088, 1, 0, 1966094, 1, 0, 1966095, 1, 0, 1966096, 1, 0, 1966108, 1, 0, 1966109, 1, 0, 1966110, 1, 0, 2031640, 1, 0, 2031641, 1, 0, 2031642, 1, 0, 2031654, 1, 0, 2031655, 1, 0, 2031656, 1, 0, 2097155, 1, 0, 2162690, 1, 0, 2162731, 1, 0, 2162732, 1, 0, 2162733, 1, 0, 2293759, 1, 0, 2228224, 1, 0, 2359336, 1, 0, 2490362, 1, 0, 2490363, 3, 0, 2490364, 3, 0, 2490365, 1, 0, 2490366, 1, 0, 2490367, 1, 0, 2424832, 1, 0, 2424833, 1, 0, 2424834, 1, 0, 2424835, 1, 0, 2424836, 1, 0, 2424837, 1, 0, 2424838, 1, 0, 2424839, 1, 0, 2424840, 1, 0, 2424841, 1, 0, 2424848, 1, 0, 2424849, 1, 0, 2424850, 3, 0, 2424851, 3, 0, 2424852, 3, 0, 2424853, 3, 0, 2424855, 3, 0, 2424856, 3, 0, 2424857, 3, 0, 2424858, 3, 0, 2424871, 1, 0, 2424873, 1, 0, 2424878, 1, 0, 2424879, 1, 0, 2424880, 1, 0, 2424881, 1, 0, 2424882, 1, 0, 2424883, 3, 0, 2424884, 3, 0, 2424885, 3, 0, 2424886, 3, 0, 2424887, 3, 0, 2424888, 3, 0, 2424889, 3, 0, 2424890, 3, 0, 2424891, 3, 0, 2424892, 1, 0, 2424893, 1, 0, 2424894, 1, 0, 2424895, 1, 0, 2424896, 1, 0, 2424898, 1, 0, 2424899, 1, 0, 2424900, 1, 0, 2555895, 1, 0, 2555896, 1, 0, 2555897, 1, 0, 2555901, 3, 0, 2555902, 3, 0, 2555903, 3, 0, 2490372, 3, 0, 2490373, 3, 0, 2490379, 1, 0, 2490380, 1, 0, 2490381, 1, 0, 2490389, 1, 0, 2490390, 1, 0, 2490391, 1, 0, 2490392, 1, 0, 2490393, 1, 0, 2490394, 1, 0, 2490396, 3, 0, 2490397, 3, 0, 2490398, 3, 0, 2490399, 1, 0, 2490400, 1, 0, 2490401, 1, 0, 2490402, 1, 0, 2490403, 1, 0, 2490404, 1, 0, 2490405, 1, 0, 2490406, 1, 0, 2490410, 1, 0, 2490411, 1, 0, 2490412, 1, 0, 2490413, 1, 0, 2490415, 3, 0, 2490416, 3, 0, 2490417, 3, 0, 2621426, 1, 0, 2555905, 3, 0, 2555906, 3, 0, 2555919, 3, 0, 2555920, 3, 0, 2555932, 1, 0, 2555933, 1, 0, 2555935, 3, 0, 2555936, 3, 0, 2555937, 3, 0, 2555938, 3, 0, 2555946, 3, 0, 2555947, 3, 0, 2555948, 3, 0, 2555975, 1, 0, 2686963, 1, 0, 2686964, 1, 0, 2621447, 3, 0, 2621448, 3, 0, 2621450, 3, 0, 2621451, 3, 0, 2621452, 3, 0, 2621453, 3, 0, 2621477, 3, 0, 2621478, 3, 0, 2621479, 3, 0, 2621509, 1, 0, 2621510, 1, 0, 2686992, 1, 0, 2687025, 1, 0, 2687026, 1, 0, 2687027, 1, 0, 2687028, 1, 0, 2687035, 1, 0, 2687043, 1, 0, 2687044, 1, 0, 2818037, 1, 0, 2818038, 1, 0, 2818039, 1, 0, 2818040, 1, 0, 2818041, 1, 0, 2818042, 1, 0, 2818043, 1, 0, 2752514, 1, 0, 2752515, 1, 0, 2752521, 1, 0, 2752523, 1, 0, 2752526, 1, 0, 2752529, 1, 0, 2752534, 1, 0, 2752535, 1, 0, 2752559, 1, 0, 2752566, 1, 0, 2752567, 1, 0, 2752568, 1, 0, 2752569, 1, 0, 2752572, 1, 0, 2752573, 1, 0, 2752576, 1, 0, 2752577, 1, 0, 2752578, 1, 0, 2883580, 1, 0, 2818048, 1, 0, 2818054, 1, 0, 2818055, 1, 0, 2818056, 1, 0, 2818066, 1, 0, 2818067, 1, 0, 2818068, 1, 0, 2818073, 1, 0, 2818093, 1, 0, 2818094, 1, 0, 2949117, 1, 0, 2949118, 1, 0, 2949119, 1, 0, 2883611, 1, 0, 2883625, 1, 0, 2883626, 1, 0, 2883627, 1, 0, 2949148, 1, 0, 2949154, 1, 0, 2949155, 1, 0, 2949157, 1, 0, 2949158, 1, 0, 2949159, 1, 0, 3014685, 1, 0, 3014688, 1, 0, 3080222, 1, 0 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 80, 0 )
+
+[node name="Generic-rpg-vendor" type="Sprite" parent="Area2D"]
+position = Vector2( 848, 572 )
+scale = Vector2( 1, 0.892157 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 852, 568 )
+shape = SubResource( 12 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+margin_left = 808.0
+margin_top = 488.0
+margin_right = 932.0
+margin_bottom = 544.0
+
+[node name="Label" type="Label" parent="ColorRect"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 4.0
+margin_top = 12.0
+margin_right = 204.0
+margin_bottom = 76.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 14 )
+text = "Olá Gabe, você está em um outro plano."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="PxkbArrowUp" type="Sprite" parent="."]
+position = Vector2( -68, 532 )
+texture = ExtResource( 10 )
+
+[node name="PxkbArrowLeft" type="Sprite" parent="."]
+position = Vector2( -84, 552 )
+scale = Vector2( 0.95494, 1.02058 )
+texture = ExtResource( 13 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
+
+[node name="gameover" type="Area2D" parent="."]
+position = Vector2( -252, 768 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gameover"]
+shape = SubResource( 13 )
+
+[node name="PxkbArrowRight" type="Sprite" parent="."]
+position = Vector2( -52, 552 )
+texture = ExtResource( 12 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="gameover" to="." method="_on_gameover_body_entered"]

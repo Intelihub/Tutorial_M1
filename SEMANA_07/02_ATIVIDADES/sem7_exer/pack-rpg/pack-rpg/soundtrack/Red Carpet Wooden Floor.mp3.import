@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Red Carpet Wooden Floor.mp3-8ae0bf91c6e5182fe0e7fa0e058bb6c7.mp3str"
+
+[deps]
+
+source_file="res://pack-rpg/pack-rpg/soundtrack/Red Carpet Wooden Floor.mp3"
+dest_files=[ "res://.import/Red Carpet Wooden Floor.mp3-8ae0bf91c6e5182fe0e7fa0e058bb6c7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

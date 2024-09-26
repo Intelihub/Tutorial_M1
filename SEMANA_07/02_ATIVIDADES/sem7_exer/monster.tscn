@@ -1,0 +1,107 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://run.tres" type="Animation" id=2]
+[ext_resource path="res://monster.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 11.25, 6.75 )
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ null ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 15 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:vframes")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1 ]
+}
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 12, 0.75 )
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 5.0
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+position = Vector2( 149, 292 )
+collision_layer = 5
+collision_mask = 5
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -1 )
+flip_h = true
+hframes = 15
+frame = 1
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2( 1, -2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( -0.75, 1.75 )
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "run"
+anims/RESET = SubResource( 1 )
+anims/run = ExtResource( 2 )
+
+[node name="Ray_wall" type="RayCast2D" parent="."]
+position = Vector2( 0, -2 )
+enabled = true
+cast_to = Vector2( -24, 0 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 0, -4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 1, -7.75 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 5 )
+
+[connection signal="body_entered" from="Area2D2" to="." method="_on_Area2D2_body_entered"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
